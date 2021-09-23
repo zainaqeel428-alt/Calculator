@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>Product Price Calculator</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body style="background-color: #4f8077;">
+
+  
+<div class="text-center my-wrap pt-5 pb-5">
+  <div data-ng-app="" data-ng-init="quantity=0;price=0">
+  <h1 class="h3 mb-3 font-weight-bold text-uppercase" style="color: var(--e_blue)">Product Price Calculator</h1>
+  <h3 style="font-size: medium;">Select Your Product?</h3>
+      <select class="custom-form">
+        <option class="custom-form-control">Rice</option>
+        <option class="custom-form-control">Sugar</option>
+        <option class="custom-form-control">Oil</option>
+        <option class="custom-form-control">Salt</option>
+      </select>
+      <div class="custom-form">
+        <div class="custom-form-label">
+            <label for="rate">US$ Ex. Rate:</label>
+        </div>
+        <input type="number" ng-model="rate" class="custom-form-control" placeholder="" required="">
+      </div>
+  <div class="custom-form">
+    <div class="custom-form-label">
+        <label for="Quantity">Quantity:</label>
+    </div>
+    <input type="number" ng-model="quantity" class="custom-form-control" placeholder="" required="">
+  </div>
+  
+  <div class="custom-form">
+    <div class="custom-form-label">
+        <label for="price">Price:</label>
+    </div>
+    <input type="number" ng-model="price" class="custom-form-control" placeholder="" required="">
+
+  </div>
+  <p><b>Total in dollar:</b> {{quantity * price}}</p>
+</div>
+</div>
+</body>
+</html>
